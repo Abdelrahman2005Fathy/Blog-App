@@ -1,10 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
+import Home from "../Home";
 
 const Layout = () => {
 
   return (
     <div>
-        <Link to="/Header"></Link>
+        <Home/>
         <Outlet />
     </div>
   );
