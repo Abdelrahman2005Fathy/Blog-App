@@ -1,5 +1,6 @@
-import { Outlet, Link } from "react-router-dom";
-import Home from "../Home";
+import { Outlet } from 'react-router-dom';
+
+import Home from '../Home';
 
 const Layout = () => {
 

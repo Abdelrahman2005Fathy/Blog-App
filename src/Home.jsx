@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import {
+  useEffect,
+  useState,
+} from 'react';
+
 import Header from './components/navBar/Header';
 import BlogList from './components/page/content/BlogList';
-const API_KEY = '832818af9f934e2194e8af2bee08ab4c';
-const COUNTRY = 'us';
-const CATEGORY = 'general';
 
 function Home() {
   const [articles, setArticles] = useState([]);
@@ -11,7 +12,7 @@ function Home() {
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState(''); 
 
-  const URL = `https://newsapi.org/v2/top-headlines?country=${COUNTRY}&category=${CATEGORY}&apiKey=${API_KEY}`;
+  const URL = `https://newsapi.org/v2/top-headlines?country=${import.meta.env.VITE_COUNTRY}&category=${import.meta.env.VITE_CATEGORY}&apiKey=${import.meta.env.VITE_API_KEY}`;
 
   const fetchArticles = async () => {
     try {

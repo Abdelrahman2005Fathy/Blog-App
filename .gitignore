@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
+# ملفات البيئة
+.env
 .vercel
